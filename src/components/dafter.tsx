@@ -281,7 +281,7 @@ export function TxList({ rows, showPayment }: { rows: TxRow[]; showPayment?: boo
       {filtered.length === 0 ? (
         <p className="py-8 text-center text-sm text-muted-foreground">لا توجد عمليات</p>
       ) : (
-        <div className="rounded-lg border">
+        <div className="overflow-x-auto rounded-lg border">
           <Table>
             <TableHeader>
               <TableRow>
