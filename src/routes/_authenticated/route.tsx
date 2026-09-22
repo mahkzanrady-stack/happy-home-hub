@@ -1,8 +1,10 @@
 import { createFileRoute, Link, Outlet, useNavigate } from "@tanstack/react-router";
 import { redirect } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
-import { Home, Package, Banknote, Users, MessageSquare, LogOut } from "lucide-react";
+import { Home, Package, Banknote, Users, MessageSquare, LogOut, Menu } from "lucide-react";
 import { useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
