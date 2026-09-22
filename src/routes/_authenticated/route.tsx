@@ -1,7 +1,7 @@
 import { createFileRoute, Link, Outlet, useNavigate } from "@tanstack/react-router";
 import { redirect } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
-import { Home, Package, Banknote, Users, MessageSquare, LogOut, Menu } from "lucide-react";
+import { Home, Package, Banknote, Users, LogOut, Menu } from "lucide-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -21,7 +21,6 @@ const NAV = [
   { to: "/goods", label: "بضاعة", icon: Package },
   { to: "/money", label: "أموال", icon: Banknote },
   { to: "/beneficiaries", label: "المستفيدين", icon: Users },
-  { to: "/chat", label: "Chat AI", icon: MessageSquare },
 ] as const;
 
 function AuthenticatedLayout() {
